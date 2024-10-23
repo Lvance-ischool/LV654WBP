@@ -1,0 +1,356 @@
+/*General styling*/
+
+/*General Colors
+Black #000000
+White #FFFFFF
+WhiteSmoke #f5f5f5
+GhostWhite #f8f8ff
+Gray #808080
+*/
+
+body {
+    background-color:#f8f8ff; 
+    text-align:center;
+    font-family: sans-serif;
+    font-weight:bolder;
+}
+
+body p {
+    text-align: justify;
+    text-indent:2em;
+    padding: .25em .5em;
+    
+}
+
+body a {
+    color:blue;
+    text-decoration:none;
+    
+}
+
+body a:hover {
+    color:red;
+}
+
+h1 {
+    color: #000000;
+    font-family:serif;
+    text-align:center;
+    letter-spacing:.05vw;
+}
+
+/*Styling for site/page layout.*/
+/*Is this grid-flexbox hybrid the wrong way to do this kind of layout?*/
+
+.wrapper { 
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.navicolumn {  
+/*    background-color:hotpink; */
+    grid-column-start:1; 
+    grid-column-end:2; 
+    width:15vw; 
+    border-color:inherit;
+}
+
+.bodycolumn {
+/*    background-color:tomato; */
+    grid-column-start:2;
+    width:82vw; 
+    border-color: inherit;
+}
+
+.row {
+    display: flex;
+    border-color:inherit;
+}
+
+/* Styling for the navigation bar */
+
+
+.navi {
+    position:sticky;
+    top:5vw;
+    text-align:center;
+    margin-top:5vw;
+    margin-left:2vw;
+    border-color:inherit;
+}
+
+.navi h2{
+    font-family:sans-serif;
+    color:#FFFFFF;
+    font-size:1.5em;
+    font-weight:700;
+    text-shadow:0px 3px 10px #000000, -5px 3px 10px #000000;
+    text-align:center;
+    margin-left:2.5vw;
+    margin-bottom:.5vw;
+    max-width:10vw;
+    letter-spacing:.05vw;
+/*    background-color:aqua;*/
+}
+
+#navibox {
+    color:#000000;
+    width:10vw;
+    max-height:15vw; 
+    margin: 1vw 2.25vw;
+    background-color:#f8f8ff;
+    border: solid 5px; 
+    border-color:inherit;
+}
+
+#navibox nav {
+    margin: 1.5vw .5vw; 
+
+}
+
+nav a {
+    color:inherit; /* determined on each page in #navibox */
+    text-decoration:none;
+    font-size:1.25em;
+}
+
+nav a:hover {
+    color:#000000;
+    text-shadow:2px 2px 5px #808080;
+    font-weight:800;
+}
+
+/*Scrapped idea to have an option to animate the backgrounds. Didn't have the time/JS knowledge to implement.*/
+/*
+#animbox {
+    width:10vw;
+    height:5vw; 
+    margin: 1vw 2.25vw;
+    background-color:white;
+    border: solid 5px; 
+    border-color: black;
+    
+}
+
+#animbox button {
+    margin-top:1.5em;
+    padding:.5em; 
+    font-family:cursive;
+}
+
+*/
+
+
+
+/*Styling information for the "main" part of the webpage, specific classes/elements within */
+
+.generalbox {
+    background-color:#f8f8ff;
+    border: solid .3em;
+    border-color: inherit;
+    padding: 2em; 
+    margin:0vw 2.5vw;
+    margin-top:3vw;
+    margin-bottom:1vw;
+    text-align:left; 
+    font-size:1.25em;
+    
+}
+
+.generalbox h1 {
+    font-family:serif;
+    color:black;
+    font-size:2em;
+    text-transform:uppercase;
+}
+
+
+
+.welcome {
+border-color:inherit;
+}
+
+.split70 {
+/*    background-color:yellow;*/
+    width:70vw; 
+    float:left; 
+    border-color:inherit;
+}
+
+.split70 .generalbox {
+/*    background-color:tomato;*/
+    max-width:70vw;
+}
+
+
+.split30 {
+/*    background-color:lawngreen;*/
+    width:30vw;
+    float:right; 
+    border-color:inherit;
+}
+
+.split30 .generalbox {
+/*    background-color:tomato;*/
+    max-width:30em;
+}
+
+.split30 h1 { /*only really for the changelog*/
+    color:#f8f8ff;
+    background-color:#000000;
+    margin: 0em;
+    padding:.25em; 
+    width:inherit; 
+    font-family:inherit;
+    font-size:1.5em;
+    font-weight:800;
+    letter-spacing:.25vw;
+}
+
+
+/*Page specific elements*/
+
+#welcomebanner {
+    width:70vw; 
+    display:block;
+    margin:2.5vw 5vw;   
+}
+
+#changelogbox {
+    background-color:#f8f8ff;
+    border: solid .3em;
+    border-color:inherit;
+    margin:1.5vw; 
+    margin-top:3vw;
+    padding:.25vw;
+}
+
+#changelog {
+    background-color:#808080;
+    color:#f5f5f5;
+    font-family:monospace;
+    font-size:1em;
+    letter-spacing:-.02vw;
+    font-weight:100;
+    margin: 1em;
+    width:20vw;
+    height:25vw;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    border:solid .3em #000000;
+    
+}
+
+#changelog::-webkit-scrollbar {
+    width: .5vw;}
+#changelog::-webkit-scrollbar-track {
+    background: #000000;}
+#changelog::-webkit-scrollbar-thumb {
+    background: #f5f5f5; } 
+/*Scrollbar styling from https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp*/
+
+#changelog table {
+    font-family: inherit; 
+    font-size: inherit; 
+    width:inherit; 
+    border-collapse: collapse; 
+    text-align: left; 
+    padding:0em 1em;
+}
+
+#changelog th {
+    text-align: center;
+}
+
+#changelog tr td {
+    padding: .25em .5em;
+    padding-right:1em;
+    border-bottom: solid .1em;
+    border-bottom-color:#f5f5f5;
+}
+
+#quickfacts {
+    text-align:center;
+    padding:0 6vw;
+    
+}
+
+#quickfacts td {
+    border-bottom-color:#808080;
+    font-weight:500;
+    padding:.5em;
+    letter-spacing:.03vw;
+    
+}
+
+#quickfacts th {
+    background-color:lightgray; 
+    font-family:serif;
+    font-weight:900;
+    padding:.5em;
+}
+
+.sublist {
+    font-weight:500;
+    letter-spacing:.03vw;
+    
+}
+
+
+#portrait {
+    border:inherit;
+    height:10em;
+    display:block;
+    border-radius:15em;
+    border-color:#0000f8;
+    
+}
+
+#portrait_desc {
+    font-size:1em;
+    text-align:justify;
+    max-width:25vw;
+    margin-top:.5vw;
+    letter-spacing:-.05vw;
+    font-weight:500;
+}
+
+#resume {
+    width:65vw;
+    height:45vw;
+    padding:2em;
+    
+}
+
+
+#magpie_img {
+    height:15em;
+    margin-left: 35%;
+    display:block;
+    
+    
+}
+
+#magpie_img:hover {
+    height:15.5em;
+    
+}
+
+/*footer styling*/
+
+footer {
+    color: #000000;
+    font-family: serif; 
+    font-size: .75em;
+    margin:0vw 35vw; 
+}
+
+footer p {
+    text-align: center;
+    text-indent: inherit;
+    background-color:#f8f8ff;
+    border: solid .3em #000000;
+    padding: 1em .5em; 
+    margin: 3em;
+    width:25vw;
+}
